@@ -1,94 +1,88 @@
+# Diabetes Risk Prediction Dashboard
 
-# Diabetes_Risk_Prediction
-=======
-# DIABETES RISK PREDICTION DASHBOARD
-
-An interactive **machine learning web app** built using **Streamlit** that predicts the risk of diabetes from patient health data.  
-It uses the **PIMA Indians Diabetes Dataset** and applies **statistical methods** and **machine learning** to deliver accurate and explainable predictions.
+This project is an interactive machine learning web application built using Streamlit to predict the risk of diabetes based on patient health data. The system uses the PIMA Indians Diabetes Dataset and incorporates statistical methods and machine learning techniques to provide accurate and explainable predictions.
 
 ---
 
-## OVERVIEW
+## Overview
 
-This dashboard helps doctors, researchers, and users understand:
-- How **each health factor** affects diabetes risk  
-- How **statistics** and **model confidence** play a role in prediction  
-- The **importance of each feature** (Glucose, BMI, Age, etc.) in model output  
-
----
-
-## FEATURES
-
-✅ **Interactive Input Panel** — Enter patient health data manually or via sliders  
-✅ **Instant Prediction** — Get a live diabetes risk score and classification  
-✅ **Feature Importance Visualization** — See which features impact predictions the most  
-✅ **Model Confidence Distribution** — Understand how sure the model is across all patients  
-✅ **Statistical Insights** — Learn how statistics supports the prediction process  
-✅ **Dark Mode UI** — Sleek, professional black-themed interface  
-✅ **Download Report** — Export results or prediction history  
+The dashboard allows users to:
+- Understand how each health factor affects diabetes risk
+- View statistical insights to interpret predictions
+- Explore model confidence and feature importance
+- Interact with a clean, responsive interface for making predictions
 
 ---
 
-## DATASET DETAILS
+## Features
 
-- **Source:** [PIMA Indians Diabetes Database (UCI Machine Learning Repository)](https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database)  
-- **Number of Features:** 8  
-- **Target:** `Outcome` → 0 (No Diabetes), 1 (Has Diabetes)
+- Interactive input panel for patient data
+- Instant prediction with probability scores
+- Feature importance visualization
+- Model confidence distribution
+- Statistical insights (correlation, variance, scaling effects)
+- Dark mode interface
+- Downloadable prediction report
+
+---
+
+## Dataset Details
+
+**Source:**  
+PIMA Indians Diabetes Database (UCI / Kaggle)  
+https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database
+
+**Features (8):**
 
 | Feature | Description |
-|----------|-------------|
+|--------|-------------|
 | Pregnancies | Number of times pregnant |
 | Glucose | Plasma glucose concentration |
 | Blood Pressure | Diastolic blood pressure (mm Hg) |
-| Skin Thickness | Triceps skin fold thickness (mm) |
-| Insulin | 2-Hour serum insulin (mu U/ml) |
-| BMI | Body Mass Index (weight/height²) |
+| Skin Thickness | Triceps skin fold thickness |
+| Insulin | Two-hour serum insulin |
+| BMI | Body Mass Index |
 | Diabetes Pedigree Function | Genetic relationship with diabetes |
 | Age | Age in years |
 
----
-
-## MACHINE LEARNING MODEL
-
-- **Algorithm:** Random Forest Classifier (tuned)  
-- **Scaler:** StandardScaler  
-- **Training Split:** 80% training, 20% testing  
-- **Evaluation Metrics:**
-  - Accuracy: ~88%
-  - ROC-AUC: ~0.90
-  - Precision & Recall balanced for medical safety
+**Target Variable:**  
+`Outcome` → 0 (No Diabetes), 1 (Diabetes)
 
 ---
 
-## MODEL INSIGHTS
+## Machine Learning Model
 
-### Feature Importance
-A dynamic **bar chart** showing how each feature influences diabetes prediction.  
-🟣 Dark-to-light colors represent decreasing importance — e.g., *Glucose* (most important) → *Skin Thickness* (least).
-
-### Model Confidence: Probability Distribution
-This histogram shows **how confident** the model is about its predictions.  
-It helps identify:
-- 🔹 When the model is *certain* (probabilities near 0 or 1)  
-- 🔹 When it’s *unsure* (probabilities near 0.5)  
-- 🔹 How balanced and well-calibrated your classifier is  
-
-### Statistical Insights
-Behind the scenes, the app uses:
-- Mean, Variance, and Standard Deviation  
-- Correlation Matrix to find relationships  
-- Logistic regression probabilities  
-- Feature scaling and normalization  
+- Algorithm: Random Forest Classifier  
+- Preprocessing: StandardScaler  
+- Train/Test Split: 80/20  
+- Evaluation Metrics:  
+  - Accuracy: ~88%  
+  - ROC-AUC: ~0.90  
+  - Balanced precision and recall
 
 ---
 
-## INSTALLATION & USAGE
+### Disclaimer
 
-### Clone or Download and Run
+Not a medical device. This project is for educational and research purposes only. It is not intended for clinical diagnosis or treatment. Always consult a qualified healthcare professional for medical decisions.
+
+---
+
+### Installation and Usage
+
 ```bash
-git clone https://github.com/your-username/Diabetes_Risk_Prediction.git
+# Clone the Repository
+git clone https://github.com/Shriyans2414/Diabetes_Risk_Prediction.git
 cd Diabetes_Risk_Prediction
 
+# Install Dependencies
+python -m venv .venv
+source .venv/bin/activate   # or: .venv\Scripts\activate on Windows
 pip install -r requirements.txt
 
+# Run the Application
 streamlit run diabetes_app.py
+
+
+
+
