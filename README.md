@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Diabetes_Risk_Prediction
 =======
 # 🩺 DIABETES RISK PREDICTION DASHBOARD
