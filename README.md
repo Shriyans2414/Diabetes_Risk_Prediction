@@ -84,8 +84,11 @@ Behind the scenes, the app uses:
 
 ## INSTALLATION & USAGE
 
-### Clone or Download
+### Clone or Download and Run
 ```bash
-git clone https://github.com/your-username/diabetes-prediction-dashboard.git
-cd diabetes_folder
->>>>>>> 51c8cf1 (Initial commit)
+git clone https://github.com/your-username/Diabetes_Risk_Prediction.git
+cd Diabetes_Risk_Prediction
+
+pip install -r requirements.txt
+
+streamlit run diabetes_app.py
